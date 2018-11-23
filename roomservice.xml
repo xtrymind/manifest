@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!--<project name="xtrymind/android_device_xiaomi_mido" path="device/xiaomi/mido" remote="github"/>
+  <project name="xtrymind/android_device_xiaomi_msm8953-common" path="device/xiaomi/msm8953-common" remote="github"/>
+  <project name="flat-project/proprietary_vendor_xiaomi_mido" path="vendor/xiaomi/" clone-depth="1" remote="github"/>
+  <project name="xtrymind/mido" path="kernel/xiaomi/msm8953" clone-depth="1" remote="github" revision="mido"/>-->
+
+  <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" />
+
+  <!-- Audio -->
+  <remove-project name="LineageOS/android_hardware_qcom_audio" />
+  <project path="hardware/qcom/audio/default" name="flat-project/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" />
+  <project path="hardware/qcom/audio-caf/msm8996" name="flat-project/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" revision="lineage-16.0-caf-8996" />
+
+  <!-- Bluetooth -->
+  <remove-project name="LineageOS/android_hardware_qcom_bt" />
+  <project groups="qcom,pdk" name="flat-project/android_hardware_qcom_bt" path="hardware/qcom/bt-caf" revision="lineage-16.0-caf" remote="github"/>
+  <project path="hardware/qcom/bt" name="flat-project/android_hardware_qcom_bt" groups="qcom,pdk-qcom" />
+
+  <!-- Display -->
+  <remove-project name="LineageOS/android_hardware_qcom_display" />
+  <project path="hardware/qcom/display" name="flat-project/android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" />
+  <project path="hardware/qcom/display-caf/msm8996" name="flat-project/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" revision="lineage-16.0-caf-8996" />
+
+  <!-- Media -->
+  <remove-project name="LineageOS/android_hardware_qcom_media" />
+  <project path="hardware/qcom/media" name="flat-project/android_hardware_qcom_media" groups="qcom,pdk-qcom" />
+  <project path="hardware/qcom/media-caf/msm8996" name="flat-project/android_hardware_qcom_media" groups="qcom,pdk" revision="lineage-16.0-caf-8996" />
+
+  <!-- Ril -->
+  <remove-project name="LineageOS/android_hardware_ril" />
+  <project path="hardware/ril" name="flat-project/android_hardware_ril" groups="pdk" />
+  <project path="hardware/ril-caf" name="flat-project/android_hardware_ril" groups="pdk" revision="lineage-16.0-caf" />
+
+  <!-- Sepolicy -->
+  <!--<remove-project name="LineageOS/android_device_qcom_sepolicy" />
+  <project path="device/qcom/sepolicy" name="flat-project/android_device_qcom_sepolicy" revision="sepolicy.lnx.4.0.r11-rel"/>-->
+
+  <!-- wlan -->
+  <remove-project name="LineageOS/android_hardware_qcom_wlan" />
+  <project path="hardware/qcom/wlan" name="flat-project/android_hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" />
+  <project path="hardware/qcom/wlan-caf" name="flat-project/android_hardware_qcom_wlan" groups="qcom_wlan,pdk" revision="lineage-16.0-caf" />
+</manifest>
